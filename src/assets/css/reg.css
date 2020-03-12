@@ -1,0 +1,126 @@
+.site-nav-page {width:1190px;margin:0 auto;}
+
+.container {width:1190px; margin:0 auto;}
+
+/*  */
+.reg-header {
+  height:43px;padding:20px 0;
+}
+.logo {width:109px;height:43px;background:url(../imgs/login_logo.png) no-repeat;text-indent:-9999px;}
+
+/*  */
+.steps {height:46px;border-bottom:2px solid #e6e6e6}
+.step-container {width:540px;overflow:hidden;margin:0 auto;}
+.steps-item {
+  float:left;
+  width:180px;height:46px;
+  font-size:16px;
+  text-align:center;line-height:46px;
+  font-weight:700;
+}
+.steps-item .step-num {
+  display:inline-block;
+  background:#CCC;
+  width:24px;height:24px;line-height:24px;border-radius:50%;
+  color:#FFF;
+  margin-right:5px;
+}
+.steps-item span {
+  color:#CCC;
+}
+
+.steps-active {
+  border-bottom:2px solid #ff4700;
+}
+.steps-active .step-num {
+  background:#F40;
+}
+.steps-active span {
+  color:#000;
+}
+
+/*  */
+.reg-form {width:720px;margin:10px auto;padding:50px 0;}
+.form-item {padding:10px 0 10px 260px;line-height:36px;position:relative;}
+.form-item .form-label {float:left;width:240px;height:37px;margin-left:-260px;text-align:right;font-size:14px;}
+.form-item .form-control {float:left;height:34px;border:1px solid #dedede;padding:0 10px;width:200px;}
+.form-item .form-control:focus {border-color:#229bf9}
+
+.validate-status {}
+.validate-status .icon {display:inline-block;width:16px;height:16px;margin-left:6px;background:url(../imgs/validate-icon.png) no-repeat;position:relative;top:4px;}
+
+.validate-status .msg {display:inline-block;}
+.validate-status .icon {background-position:0 0;}
+
+
+.error .form-control {border:1px solid #ff3f13;}
+.error .msg {color:#ff3f13;}
+.error .icon {background-position:0 0;}
+.success .icon {background-position:-16px 0;}
+
+.form-item .btn-next {width:222px;color:#999;background:#F40;color:#FFF;border-color:#F40}
+.form-item .btn-next.disabled {color:#999;background:#EEE;border-color:#dedede;}
+.form-item .btn-next.disabled:focus {outline:none;}
+
+
+.password-strength {width:210px;height:88px;position:absolute;background:#EEE;right:2px;top:-10px; padding:10px;}
+.password-strength .title {}
+.password-strength .title .label {width:60px;}
+.password-strength .title .index {margin-top:11px;}
+.password-strength .title .index-item {width:30px;height:14px;background:#DCDCDC;border:1px solid #FFF;margin-left:-1px;}
+.password-strength .title .txt {}
+.password-strength {}
+
+.password-strength .weak .txt {color:#F33;}
+.password-strength .weak .active {background:#F33;}
+
+.password-strength .middle .txt {color:#F93;}
+.password-strength .middle .active {background:#F93;}
+
+.password-strength .strong .txt {color:#0A0;}
+.password-strength .strong .active {background:#0A0;}
+
+.password-strength .rules {}
+.password-strength .rule-item {line-height:18px;}
+.password-strength .rule-icon {width:14px;text-align:center;color:#AAA;}
+.password-strength .success {color:#0C0;}
+.password-strength .rule-txt {font-size:12px;}
+
+
+/*  */
+.success-form {width:720px;margin:10px auto;text-align:center;}
+.success-form .txt {
+  font-size:26px;color:#AAA;
+}
+.success-form .login-ref-container {
+  margin-top:20px;
+}
+
+/*  */
+.dialog {
+  padding:20px;border:2px solid #dedede;border-top:2px solid #ff4a00;
+  position:absolute;left:50%;top:230px;margin-left:-350px;
+  z-index:99;
+  background:#FFF;
+}
+.dialog-title {font-size:16px;height:24px;font-weight:bold;}
+.dialog-close-btn {font-size:30px;line-height:16px;color:#CCC;}
+
+/*  */
+.reg-agreement {
+  width:680px;height:420px;
+}
+
+.reg-agreement .content p {
+  font-size:14px; margin:4px 0;
+}
+
+.btn-agreement {
+  width:140px;height:36px;padding:0 20px;
+  background:#ff4001;
+  color:#FFF;
+  font-size:12px;font-weight:700px;
+  border:none;
+  position:absolute;
+  left:50%;bottom:20px;margin-left:-70px;
+}

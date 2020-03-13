@@ -2,6 +2,8 @@
   <div class="">
     <siteNav/>
     <Header/>
+    <Nav/>
+
   </div>
 </template>
 
@@ -10,10 +12,12 @@
 import {Component, Vue} from 'vue-property-decorator';
 import siteNav from '@/components/common/siteNav';
 import Header from '@/components/header/Header';
+import Nav from '@/components/main/Nav';
 @Component({
   components: {
     siteNav,
-    Header
+    Header,
+    Nav
   }
 })
 export default class Index extends Vue {

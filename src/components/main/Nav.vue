@@ -23,7 +23,50 @@
           <li class="fl"><a href="#">苏宁易购</a></li>
         </ul>
       </div>
-      <Catalog></Catalog>
+
+      <div class="index-nav-content clearfix">
+        <div class="main fl">
+          <div class="main-top clearfix">
+            <Catalog></Catalog>
+            <div class="index-nav-banner-container fl">
+              <div class="banners fl">
+                <Banner class="banner1" :bannerImg='bannerImg' :bannerHeight='280'></Banner>
+                <div class="tmall-title clearfix">
+                  <img src="../../assets/imgs/banner2-title.png" class="fl" alt="">
+                  <span class="title fl">理想生活上天猫</span>
+                  <span class="indicator fr">
+                    <i>6</i>/6
+                  </span>
+                  <span class="indicator-bar">
+                  </span>
+                </div>
+                <Banner class='banner2' :bannerImg='bannerImg2' :bannerHeight='198'></Banner>
+              </div>
+              <div class="ads fr">
+                <a href="#" class="ad1">
+                  <img src="../../assets/imgs/ad1.webp" alt="">
+                </a>
+                <div class="ad2">
+                  <h4>今日热卖</h4>
+                  <a href="#">
+                    <img src="../../assets/imgs/ad2.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="main-bottom">
+            <a href="#" class="taobao-toutiao"></a>
+          </div>
+        </div>
+        <div class="right fr">
+
+        </div>
+
+      </div>
+
+
     </div>
   </div>
 </template>
@@ -34,6 +77,7 @@
 <script lang='ts'>
 
 import Catalog from "./catalog.vue";
+import Banner from "./banner.vue";
 import {Component, Vue,Watch} from 'vue-property-decorator';
 
 
@@ -41,14 +85,35 @@ import {Component, Vue,Watch} from 'vue-property-decorator';
 
 @Component({
   components : {
-    Catalog
+    Catalog,
+    Banner
   }
 })
 
 export default  class Nav extends Vue{
 
+  public bannerImg = [
+    require('../../assets/imgs/banner-1-1.webp'),
+    require("../../assets/imgs/banner-1-2.jpg"),
+    require("../../assets/imgs/banner-1-3.jpg"),
+    require("../../assets/imgs/banner-1-4.jpg"),
+    require("../../assets/imgs/banner-1-5.webp")
+  ]
+
+  public bannerImg2 = [
+    require('../../assets/imgs/banner-2-1.png'),
+    require('../../assets/imgs/banner-2-2.png'),
+    require('../../assets/imgs/banner-2-3.png'),
+    require('../../assets/imgs/banner-2-4.png'),
+    require('../../assets/imgs/banner-2-5.png'),
+    require('../../assets/imgs/banner-2-6.png'),
+
+  ]
+
 }
 </script>
+
+
 
 <style lang="css" scoped>
 

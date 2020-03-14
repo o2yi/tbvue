@@ -17,6 +17,7 @@ Vue.prototype.axios = axios;
 // console.log(axios);
 // Vue.use(Vueaxios, axios)
 
+Vue.filter('imgPath',(val:String)=>'http://api.zhinengshe.com/10004-taobao/'+val)
 
 
 

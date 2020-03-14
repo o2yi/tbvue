@@ -1,53 +1,41 @@
 <template lang="html">
-  <div class="index-nav-content clearfix">
-    <div class="main fl">
-      <div class="main-top clearfix">
-        <ul class="catalog-list fl" @mouseout='catalog.active = -1'>
-          <!-- <li class="on"> -->
-          <li :class="{'on':catalog.active == index}" @mouseover='catalog.active = index' v-for='item,index in catalog.httpData' >
-            <template v-for='item2,index2 in item'>
-              <a :href="item2.href">{{item2.title}}</a>
-              {{index2 != item.length-1?'/':''}}
-            </template>
+  <div class="">
+    <ul class="catalog-list fl" @mouseout='catalog.active = -1'>
+      <!-- <li class="on"> -->
+      <li :class="{'on':catalog.active == index}" @mouseover='catalog.active = index' v-for='item,index in catalog.httpData' >
+        <template v-for='item2,index2 in item'>
+          <a :href="item2.href">{{item2.title}}</a>
+          {{index2 != item.length-1?'/':''}}
+        </template>
 
-          </li>
+      </li>
 
-        </ul>
-        <div class="catalog-sub-list clearfix" v-if='catalog.active != -1'>
-          <div class="catalog-sub-list-links fl">
-            <div class="service-panel" v-for="item in catalog.httpData2.panels ">
-              <h3>
-                {{item.title}}
-                <a href="#" class="more">更多</a>
-              </h3>
-              <div class="links" >
-                <a v-for='item2 in item.links' :href="item2.href" :class="{'hot':item2.hot}">{{item2.title}}</a>
+    </ul>
+    <div class="catalog-sub-list clearfix" v-if='catalog.active != -1'>
+      <div class="catalog-sub-list-links fl">
+        <div class="service-panel" v-for="item in catalog.httpData2.panels ">
+          <h3>
+            {{item.title}}
+            <a href="#" class="more">更多</a>
+          </h3>
+          <div class="links" >
+            <a v-for='item2 in item.links' :href="item2.href" :class="{'hot':item2.hot}">{{item2.title}}</a>
 
-              </div>
-            </div>
-
-          </div>
-          <div class="catalog-sub-list-ad fr">
-            <h3>猜你喜欢</h3>
-            <div class="catalog-ad-list">
-              <a :href="item.href" v-for='item in catalog.httpData2.rmds'>
-                <img :src="item.img" alt="">
-                <span>{{item.title}}</span>
-              </a>
-
-            </div>
           </div>
         </div>
 
       </div>
-      <div class="main-bottom">
-        <a href="#" class="taobao-toutiao"></a>
+      <div class="catalog-sub-list-ad fr">
+        <h3>猜你喜欢</h3>
+        <div class="catalog-ad-list">
+          <a :href="item.href" v-for='item in catalog.httpData2.rmds'>
+            <img :src="item.img|imgPath" alt="">
+            <span>{{item.title}}</span>
+          </a>
+
+        </div>
       </div>
     </div>
-    <div class="right fr">
-
-    </div>
-
   </div>
 </template>
 

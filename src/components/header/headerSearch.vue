@@ -91,7 +91,7 @@ export default class HeaderSearch extends Vue{
     }
     created(){
         let app = document;
-        console.log(app);
+        // console.log(app);
         app.addEventListener('click',(ev)=>{
           // ev.stopPropagation();
           // ev.preventDefault();
